@@ -33,7 +33,7 @@ function StairsPattern() {
           />
         ))}
       </div>
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0A1B4F]/80 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0C0D87]/80 to-transparent" />
     </div>
   );
 }
@@ -43,11 +43,11 @@ export function FinalCTA() {
     <section className="py-6 px-6">
       <div className="mx-auto max-w-7xl">
         <div className="grid md:grid-cols-2 gap-3">
-          <div className="relative  overflow-hidden bg-[#1B3BFF] flex flex-col justify-between min-h-64 p-8">
+          <div className="relative  overflow-hidden bg-[#0084eb] flex flex-col justify-between min-h-64 p-8">
             <div className="absolute inset-0">
               <ParticleWave />
             </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-[#1B3BFF]/90 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0084eb]/90 via-transparent to-transparent" />
             <div className="relative z-10 flex gap-2 mb-auto">
               <div className="w-3 h-3 bg-white/60 rounded-sm" />
               <div className="w-3 h-3 bg-white/30 rounded-sm" />
@@ -65,7 +65,7 @@ export function FinalCTA() {
             </div>
           </div>
 
-          <div className="relative  overflow-hidden bg-[#0A1B4F] flex flex-col justify-between min-h-64 p-8">
+          <div className="relative  overflow-hidden bg-[#0C0D87] flex flex-col justify-between min-h-64 p-8">
             <StairsPattern />
             <div className="relative z-10 flex gap-2 mb-auto">
               <div className="w-3 h-3 bg-white/40 rounded-sm" />

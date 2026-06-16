@@ -2,24 +2,28 @@
 
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import { NumberTicker } from "../ui/number-ticker";
 
 const BUFFER = 60;
 
 const stats = [
   {
     label: "Experience",
-    value: "10+",
+    value: "10",
     description: "Years of industry expertise in gold-backed financial services.",
+    suffix: "+",
   },
   {
     label: "Transactions",
-    value: "600+",
+    value: "600",
     description: "Successful transactions executed across our partner network.",
+    suffix: "+",
   },
   {
     label: "Loan Value",
-    value: "₹1.6 B",
+    value: "1.6",
     description: "Total loan value disbursed through trusted client relationships.",
+    suffix: "B+",
   },
 ];
 
@@ -48,7 +52,7 @@ export function Stats() {
           <h2 className="text-4xl md:text-5xl font-medium text-gray-900 leading-[1.08]">
             A Track Record Built on Momentum
           </h2>
-          <p className="mt-4 text-gray-400 text-[13px] leading-relaxed">
+          <p className="mt-4 text-[13px] leading-relaxed">
             A growing footprint across gold-backed financial services, trusted
             partnerships, and operational delivery.
           </p>
@@ -92,8 +96,8 @@ export function Stats() {
               <span className="text-lg text-black/80 uppercase tracking-wide">
                 {s.label}
               </span>
-              <span className="text-4xl font-medium text-[#1B3BFF] tracking-tight">
-                {s.value}
+              <span className="text-4xl font-medium text-[#0084eb] tracking-tight">
+                <NumberTicker className="text-4xl font-medium text-[#0084eb] tracking-tight" value={Number(s.value)} /> {s.suffix}
               </span>
               <p className="text-black/80 text-base leading-relaxed">
                 {s.description}

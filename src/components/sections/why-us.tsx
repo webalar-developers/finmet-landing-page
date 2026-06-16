@@ -47,7 +47,7 @@ const pillars = [
 
 export function WhyUs() {
   return (
-    <section className="bg-[#0A1B4F] py-20 md:py-24">
+    <section className="bg-[#0C0D87] py-20 md:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-5xl font-medium text-white tracking-tight">
@@ -62,12 +62,19 @@ export function WhyUs() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {pillars.map((p,i) => (
-            <div key={p.title} className="flex flex-col gap-3">
-              <div className="text-white/80 text-2xl font-medium">Step {i+1}</div>
-              <h3 className="text-white text-2xl font-medium">{p.title}</h3>
-              <p className="text-white/80 text-base leading-relaxed">
-                {p.description}
-              </p>
+            <div key={p.title} className="flex gap-4">
+              <div className="shrink-0 w-11 h-11 rounded-full border border-white/20 flex items-center justify-center text-white">
+                {p.icon}
+              </div>
+              <div className="flex flex-col gap-1.5">
+                <span className="text-white/50 text-xs font-medium uppercase tracking-widest">
+                  Step {i+1}
+                </span>
+                <h3 className="text-white text-lg font-medium leading-snug">{p.title}</h3>
+                <p className="text-white/70 text-sm leading-relaxed">
+                  {p.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>

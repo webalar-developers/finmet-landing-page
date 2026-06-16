@@ -20,13 +20,13 @@ export default function Home() {
       <main>
         <Hero />
         <LogoBar />
+        <Pricing />
         <Features />
         <HowItWorks />
         <WhyUs />
         <Stats />
         <Testimonials />
-        <Pricing />
-        <QuoteBanner />
+        {/* <QuoteBanner /> */}
         <Contact />
         <FAQ />
         <FinalCTA />

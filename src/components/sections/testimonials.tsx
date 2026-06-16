@@ -83,7 +83,7 @@ export function Testimonials() {
             onClick={() =>
               setIdx((i) => (i - 1 + testimonials.length) % testimonials.length)
             }
-            className="w-9 h-9 rounded-full bg-[#1B3BFF] text-white flex items-center justify-center hover:bg-[#1530d4] transition-colors"
+            className="w-9 h-9 rounded-full bg-[#0084eb] text-white flex items-center justify-center hover:bg-[#1530d4] transition-colors"
             aria-label="Previous"
           >
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -92,7 +92,7 @@ export function Testimonials() {
           </button>
           <button
             onClick={() => setIdx((i) => (i + 1) % testimonials.length)}
-            className="w-9 h-9 rounded-full bg-[#1B3BFF] text-white flex items-center justify-center hover:bg-[#1530d4] transition-colors"
+            className="w-9 h-9 rounded-full bg-[#0084eb] text-white flex items-center justify-center hover:bg-[#1530d4] transition-colors"
             aria-label="Next"
           >
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">

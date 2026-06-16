@@ -1,6 +1,6 @@
 export function QuoteBanner() {
   return (
-    <section className="relative bg-[#0A1B4F] py-20 md:py-24 overflow-hidden">
+    <section className="relative bg-[#0C0D87] py-20 md:py-24 overflow-hidden">
       <div
         className="absolute inset-0"
         style={{

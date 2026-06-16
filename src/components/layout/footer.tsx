@@ -18,7 +18,7 @@ const social = [
 export function Footer() {
   return (
     <footer className=" w-full">
-      <div className="mx-auto max-w-7xl px-6 py-16 bg-[#1B3BFF] mb-10">
+      <div className="mx-auto max-w-7xl px-6 py-16 bg-[#0084eb] mb-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
           <div className="col-span-2 md:col-span-2">
             <div className="flex items-center gap-2.5 mb-3">

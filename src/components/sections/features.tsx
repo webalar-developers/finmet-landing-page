@@ -44,7 +44,7 @@ function BuildingPattern() {
           />
         ))}
       </div>
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0A1B4F]/95 via-[#0A1B4F]/50 to-[#0A1B4F]/20" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0C0D87]/95 via-[#0C0D87]/50 to-[#0C0D87]/20" />
     </div>
   );
 }
@@ -60,7 +60,7 @@ function DashboardMock() {
           <div className="h-2 w-2 rounded-full bg-white/10" />
         </div>
         <div className="ml-2 h-1.5 w-20 rounded-full bg-white/[0.06]" />
-        <div className="ml-auto h-1.5 w-8 rounded-full bg-[#1B3BFF]/40" />
+        <div className="ml-auto h-1.5 w-8 rounded-full bg-[#0084eb]/40" />
       </div>
       <div className="px-4 pb-4 pt-3">
         <div className="flex items-baseline gap-1 mb-3">
@@ -76,7 +76,7 @@ function DashboardMock() {
                 height: `${h}%`,
                 background:
                   i === 7
-                    ? "#1B3BFF"
+                    ? "#0084eb"
                     : i === 11
                       ? "rgba(27,59,255,0.35)"
                       : "rgba(255,255,255,0.06)",
@@ -145,7 +145,7 @@ export function Features() {
         <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-gray-900">
           Driving Change Across the Gold Industry
         </h2>
-        <p className="mt-4 text-gray-400 text-[15px] max-w-xl mx-auto leading-relaxed">
+        <p className="mt-4 text-[15px] max-w-xl mx-auto leading-relaxed">
           The work of FinMet Technologies is guided by principles that make gold
           more accessible, more eﬃcient, and more relevant to the needs of a
           modern financial landscape.
@@ -217,7 +217,7 @@ export function Features() {
             </div>
           </div>
 
-          <div ref={visibilityCardRef} className="md:col-span-2 relative  overflow-hidden bg-[#0A1B4F] p-8 md:p-10">
+          <div ref={visibilityCardRef} className="md:col-span-2 relative  overflow-hidden bg-[#0C0D87] p-8 md:p-10">
             <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
               <div>
                 <h3 className="text-2xl md:text-3xl font-semibold text-white mb-3">

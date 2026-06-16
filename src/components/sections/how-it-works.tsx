@@ -47,7 +47,7 @@ function FanLines() {
     <svg
       viewBox={`0 0 ${W} ${H}`}
       preserveAspectRatio="none"
-      className="w-full h-full"
+      className="w-full h-full overflow-visible"
       aria-hidden
     >
       <defs>
@@ -76,7 +76,7 @@ function FanLines() {
             <path
               d={d}
               fill="none"
-              stroke="#1B3BFF"
+              stroke="#0084eb"
               strokeWidth="1.2"
               strokeLinecap="round"
               strokeDasharray="900"
@@ -110,19 +110,19 @@ export function HowItWorks() {
           <div className="flex flex-col justify-center gap-8 relative z-10">
             {steps.map((step) => (
               <div key={step.num} className="flex flex-col gap-1.5">
-                <span className="text-[#1B3BFF] text-4xl font-medium tracking-tight">
+                <span className="text-[#0084eb] text-4xl font-medium tracking-tight">
                   {step.num}
                 </span>
                 <h3 className="text-3xl font-medium text-gray-900">
                   {step.title}
                 </h3>
-                <p className="text-gray-400 text-base leading-relaxed max-w-xs">
+                <p className="text-base leading-relaxed max-w-xs">
                   {step.description}
                 </p>
                 {step.cta && (
                   <Link
                     href="#get-started"
-                    className="mt-3 inline-flex items-center gap-2 bg-[#1B3BFF] text-white text-base font-medium px-4 py-2.5  hover:bg-[#1530d4] transition-colors w-fit"
+                    className="mt-3 inline-flex items-center gap-2 bg-[#0084eb] text-white text-base font-medium px-4 py-2.5  hover:bg-[#1530d4] transition-colors w-fit"
                   >
                     Get started
                     <svg width="11" height="11" viewBox="0 0 11 11" fill="none">

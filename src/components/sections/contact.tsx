@@ -56,7 +56,7 @@ ready to help you find the right path forward.
                 placeholder="Jane Smith"
                 value={form.name}
                 onChange={set("name")}
-                className="h-10 border border-gray-200 bg-white px-3 text-[13px] text-gray-900 placeholder:text-gray-300 outline-none focus:border-[#1B3BFF] transition-colors"
+                className="h-10 border border-gray-200 bg-white px-3 text-[13px] text-gray-900 placeholder:text-gray-300 outline-none focus:border-[#0084eb] transition-colors"
               />
             </div>
             <div className="flex flex-col gap-1.5">
@@ -66,7 +66,7 @@ ready to help you find the right path forward.
                 placeholder="Finmet"
                 value={form.company}
                 onChange={set("company")}
-                className="h-10 border border-gray-200 bg-white px-3 text-[13px] text-gray-900 placeholder:text-gray-300 outline-none focus:border-[#1B3BFF] transition-colors"
+                className="h-10 border border-gray-200 bg-white px-3 text-[13px] text-gray-900 placeholder:text-gray-300 outline-none focus:border-[#0084eb] transition-colors"
               />
             </div>
           </div>
@@ -79,7 +79,7 @@ ready to help you find the right path forward.
                 placeholder="jane@email.com"
                 value={form.email}
                 onChange={set("email")}
-                className="h-10 border border-gray-200 bg-white px-3 text-[13px] text-gray-900 placeholder:text-gray-300 outline-none focus:border-[#1B3BFF] transition-colors"
+                className="h-10 border border-gray-200 bg-white px-3 text-[13px] text-gray-900 placeholder:text-gray-300 outline-none focus:border-[#0084eb] transition-colors"
               />
             </div>
             <div className="flex flex-col gap-1.5">
@@ -89,7 +89,7 @@ ready to help you find the right path forward.
                 placeholder="+91 00000 00000"
                 value={form.phone}
                 onChange={set("phone")}
-                className="h-10 border border-gray-200 bg-white px-3 text-[13px] text-gray-900 placeholder:text-gray-300 outline-none focus:border-[#1B3BFF] transition-colors"
+                className="h-10 border border-gray-200 bg-white px-3 text-[13px] text-gray-900 placeholder:text-gray-300 outline-none focus:border-[#0084eb] transition-colors"
               />
             </div>
           </div>
@@ -99,7 +99,7 @@ ready to help you find the right path forward.
             <select
               value={form.enquiry}
               onChange={set("enquiry")}
-              className="h-10 border border-gray-200 bg-white px-3 text-[13px] text-gray-400 outline-none focus:border-[#1B3BFF] transition-colors appearance-none"
+              className="h-10 border border-gray-200 bg-white px-3 text-[13px] text-gray-400 outline-none focus:border-[#0084eb] transition-colors appearance-none"
             >
               <option value="" disabled>Select...</option>
               <option value="gold-loans">Gold Loans</option>
@@ -118,13 +118,13 @@ ready to help you find the right path forward.
               placeholder="Message"
               value={form.message}
               onChange={set("message")}
-              className="border border-gray-200 bg-white px-3 py-2.5 text-[13px] text-gray-900 placeholder:text-gray-300 outline-none focus:border-[#1B3BFF] transition-colors resize-none"
+              className="border border-gray-200 bg-white px-3 py-2.5 text-[13px] text-gray-900 placeholder:text-gray-300 outline-none focus:border-[#0084eb] transition-colors resize-none"
             />
           </div>
 
           <button
             type="submit"
-            className="w-full h-11 bg-[#1B3BFF] text-white text-[13px] font-semibold hover:bg-[#1530d4] transition-colors"
+            className="w-full h-11 bg-[#0084eb] text-white text-[13px] font-semibold hover:bg-[#1530d4] transition-colors"
           >
             Submit Enquiry
           </button>

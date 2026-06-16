@@ -1,3 +1,4 @@
+import { ShieldCheck, Handshake, BarChart3, Cpu } from "lucide-react";
 import { ParticleWave } from "@/components/ui/particle-wave";
 
 function ArrowUpRight({ size = 16 }: { size?: number }) {
@@ -22,7 +23,7 @@ export function Hero() {
           <h1 className="text-5xl md:text-6xl lg:text-[72px] font-semibold tracking-tight text-gray-900 leading-[1.06] md:max-w-[58%]">
             Your Partner in Precious Metals<br />
           </h1>
-          <p className="text-gray-500 text-xl leading-relaxed md:max-w-md md:mt-3">
+          <p className="text-xl leading-relaxed md:max-w-md md:mt-3">
             FinMet Technologies helps unlock the value of gold through secure,
             technology-enabled solutions built for financial inclusion, operational
             eﬃciency, and long-term growth.
@@ -33,16 +34,19 @@ export function Hero() {
       <div className="mx-auto w-full max-w-7xl px-6 pb-12 md:pb-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {[
-            "Security led operations",
-            "Trusted financial partnerships",
-            "Industry experience",
-            "Efficient technology platforms",
-          ].map((label, i) => (
+            { label: "Security led operations", icon: ShieldCheck },
+            { label: "Trusted financial partnerships", icon: Handshake },
+            { label: "Industry experience", icon: BarChart3 },
+            { label: "Efficient technology platforms", icon: Cpu },
+          ].map(({ label, icon: Icon }, i) => (
             <div
               key={i}
-              className="flex flex-col justify-between h-32 md:h-36 p-5 bg-[#0A1B4F] text-white"
+              className="flex flex-col justify-between h-32 md:h-36 p-5 bg-[#0C0D87] text-white"
             >
-              <span className="text-[13px] md:text-[14px] font-medium leading-snug">{label}</span>
+              <div className="flex items-start gap-2">
+                <Icon size={18} className="opacity-80 shrink-0 mt-0.5" />
+                <span className="text-[13px] md:text-lg font-medium leading-snug">{label}</span>
+              </div>
               <span className="opacity-60">
                 <ArrowUpRight size={16} />
               </span>

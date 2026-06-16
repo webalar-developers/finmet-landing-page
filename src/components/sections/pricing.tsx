@@ -161,7 +161,7 @@ export function Pricing() {
             >
               <div
                 className={`grid md:grid-cols-3 gap-6 md:gap-0 p-7 md:p-8 items-center ${isDark
-                    ? "bg-[#0A1B4F] border-[#0A1B4F] shadow-blue-950/20"
+                    ? "bg-[#0C0D87] border-[#0C0D87] shadow-blue-950/20"
                     : isMid
                       ? "bg-secondary border-gray-200"
                       : "bg-secondary border-gray-200"
@@ -170,9 +170,9 @@ export function Pricing() {
                 <div className="md:pr-10">
                   <div className="flex items-center gap-2 mb-3">
                     <div className="flex gap-[3px]">
-                      <div className={`w-[6px] h-[6px] ${isDark ? "bg-blue-400" : "bg-[#1B3BFF]"}`} />
-                      <div className={`w-[6px] h-[6px] ${isDark ? "bg-blue-500" : "bg-[#1B3BFF]"}`} />
-                      <div className={`w-[6px] h-[6px] ${isDark ? "bg-blue-700" : "bg-[#1B3BFF]/40"}`} />
+                      <div className={`w-[6px] h-[6px] ${isDark ? "bg-blue-400" : "bg-[#0084eb]"}`} />
+                      <div className={`w-[6px] h-[6px] ${isDark ? "bg-blue-500" : "bg-[#0084eb]"}`} />
+                      <div className={`w-[6px] h-[6px] ${isDark ? "bg-blue-700" : "bg-[#0084eb]/40"}`} />
                     </div>
                   </div>
                   <div className="flex items-baseline gap-1 mb-3">
@@ -192,7 +192,7 @@ export function Pricing() {
                   <ul className="flex flex-col gap-2.5">
                     {plan.features.map((f, i) => (
                       <li key={f} className={`flex items-center gap-3 text-lg ${isDark ? "text-blue-100/70" : "text-gray-600"}`}>
-                        <span className={isDark ? "text-blue-300/60" : "text-[#1B3BFF]"}>
+                        <span className={isDark ? "text-blue-300/60" : "text-[#0084eb]"}>
                           {featureIcons[i % featureIcons.length]}
                         </span>
                         {f}
@@ -206,7 +206,7 @@ export function Pricing() {
                     href="#get-started"
                     className={`w-full inline-flex items-center justify-center gap-2 text-base font-medium px-5 py-3 transition-colors ${isDark
                         ? "bg-white text-gray-900 hover:bg-gray-100"
-                        : "bg-[#1B3BFF] text-white hover:bg-[#1530d4]"
+                        : "bg-[#0084eb] text-white hover:bg-[#1530d4]"
                       }`}
                   >
                     {plan.cta} <ArrowUpRight />
