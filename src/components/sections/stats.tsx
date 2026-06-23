@@ -52,7 +52,7 @@ export function Stats() {
           <h2 className="text-4xl md:text-5xl font-medium text-gray-900 leading-[1.08]">
             A Track Record Built on Momentum
           </h2>
-          <p className="mt-4 text-[13px] leading-relaxed">
+          <p className="mt-4 text-base leading-relaxed">
             A growing footprint across gold-backed financial services, trusted
             partnerships, and operational delivery.
           </p>
@@ -66,7 +66,7 @@ export function Stats() {
               style={{ height: `calc(100% + ${BUFFER * 2}px)`, marginTop: `-${BUFFER}px` }}
             >
               <Image
-                src="/stats/stats-building.avif"
+                src="/stats/stats-building.png"
                 alt="Building"
                 fill
                 className="object-cover"
@@ -81,7 +81,7 @@ export function Stats() {
               style={{ height: `calc(100% + ${BUFFER * 2}px)`, marginTop: `-${BUFFER}px` }}
             >
               <Image
-                src="/stats/stats-wall.avif"
+                src="/stats/stats-wall.png"
                 alt="Wall"
                 fill
                 className="object-cover"

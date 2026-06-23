@@ -53,7 +53,7 @@ export function WhyUs() {
           <h2 className="text-3xl md:text-5xl font-medium text-white tracking-tight">
             A More Structured Approach to Gold Monetization
           </h2>
-          <p className="mt-4 text-white/80 text-[14px] leading-relaxed max-w-2xl  mx-auto">
+          <p className="mt-4 text-white/80 text-base leading-relaxed max-w-2xl  mx-auto">
             FinMet Technologies brings clarity to gold monetization through a process
             built around practical execution, institutional alignment, and long-term
             partner value.

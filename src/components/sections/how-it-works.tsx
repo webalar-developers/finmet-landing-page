@@ -122,7 +122,7 @@ export function HowItWorks() {
                 {step.cta && (
                   <Link
                     href="#get-started"
-                    className="mt-3 inline-flex items-center gap-2 bg-[#0084eb] text-white text-base font-medium px-4 py-2.5  hover:bg-[#1530d4] transition-colors w-fit"
+                    className="mt-3 inline-flex items-center gap-2 bg-[#0084eb] text-white text-base font-medium px-4 py-2.5  hover:bg-[#006bbd] transition-colors w-fit"
                   >
                     Get started
                     <svg width="11" height="11" viewBox="0 0 11 11" fill="none">

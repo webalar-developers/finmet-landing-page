@@ -141,7 +141,7 @@ export function Pricing() {
             <h2 className="text-4xl md:text-5xl font-medium text-gray-900 tracking-tight">
               Built for the Modern Gold Economy
             </h2>
-            <p className="text-black/60 text-base leading-relaxed max-w-xl md:text-right">
+            <p className="text-black text-base leading-relaxed max-w-xl md:text-right">
               FinMet Technologies oﬀers a focused suite of solutions designed to help
               institutions and businesses unlock the value of gold with greater precision,
               flexibility, and control.
@@ -206,7 +206,7 @@ export function Pricing() {
                     href="#get-started"
                     className={`w-full inline-flex items-center justify-center gap-2 text-base font-medium px-5 py-3 transition-colors ${isDark
                         ? "bg-white text-gray-900 hover:bg-gray-100"
-                        : "bg-[#0084eb] text-white hover:bg-[#1530d4]"
+                        : "bg-[#0084eb] text-white hover:bg-[#006bbd]"
                       }`}
                   >
                     {plan.cta} <ArrowUpRight />

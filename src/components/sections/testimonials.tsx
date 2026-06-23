@@ -42,7 +42,7 @@ export function Testimonials() {
           <h2 className="text-3xl md:text-5xl font-medium text-gray-900 tracking-tight">
             What our clients say.
           </h2>
-          <p className="mt-3 text-black/60 text-base leading-relaxed max-w-2xl mx-auto">
+          <p className="mt-3 text-black text-base leading-relaxed max-w-2xl mx-auto">
             We don&apos;t promise transformation, we make trust simple. That&apos;s why teams choose us - they can rely on us to keep their operations moving without friction.
           </p>
         </div>
@@ -83,7 +83,7 @@ export function Testimonials() {
             onClick={() =>
               setIdx((i) => (i - 1 + testimonials.length) % testimonials.length)
             }
-            className="w-9 h-9 rounded-full bg-[#0084eb] text-white flex items-center justify-center hover:bg-[#1530d4] transition-colors"
+            className="w-9 h-9 rounded-full bg-[#0084eb] text-white flex items-center justify-center hover:bg-[#006bbd] transition-colors"
             aria-label="Previous"
           >
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -92,7 +92,7 @@ export function Testimonials() {
           </button>
           <button
             onClick={() => setIdx((i) => (i + 1) % testimonials.length)}
-            className="w-9 h-9 rounded-full bg-[#0084eb] text-white flex items-center justify-center hover:bg-[#1530d4] transition-colors"
+            className="w-9 h-9 rounded-full bg-[#0084eb] text-white flex items-center justify-center hover:bg-[#006bbd] transition-colors"
             aria-label="Next"
           >
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">

@@ -2,10 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const nav = [
-  { label: "Features", href: "#features" },
-  { label: "How it works", href: "#how-it-works" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "F.A.Q", href: "#faq" },
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "#how-it-works" },
+  { label: "Solutions", href: "#features" },
+  { label: "Partners", href: "#testimonials" },
 ];
 
 const social = [
@@ -34,7 +34,7 @@ export function Footer() {
 
           <div>
             <p className="text-lg font-medium uppercase tracking-widest text-white mb-4">
-              Navigation
+              Quick Links
             </p>
             <ul className="flex flex-col gap-2.5">
               {nav.map((l) => (

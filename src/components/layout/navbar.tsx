@@ -64,7 +64,7 @@ export function Navbar() {
 
           <Link
             href="#get-started"
-            className="hidden md:flex items-center gap-2 bg-[#0084eb] text-white text-base font-medium px-4 py-2 hover:bg-[#1530d4] transition-colors"
+            className="hidden md:flex items-center gap-2 bg-[#0084eb] text-white text-base font-medium px-4 py-2 hover:bg-[#006bbd] transition-colors"
           >
            Talk to Us
             <ArrowUpRight />

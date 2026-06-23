@@ -145,7 +145,7 @@ export function Features() {
         <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-gray-900">
           Driving Change Across the Gold Industry
         </h2>
-        <p className="mt-4 text-[15px] max-w-xl mx-auto leading-relaxed">
+        <p className="mt-4 text-base max-w-xl mx-auto leading-relaxed">
           The work of FinMet Technologies is guided by principles that make gold
           more accessible, more eﬃcient, and more relevant to the needs of a
           modern financial landscape.

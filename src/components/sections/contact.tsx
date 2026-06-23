@@ -124,7 +124,7 @@ ready to help you find the right path forward.
 
           <button
             type="submit"
-            className="w-full h-11 bg-[#0084eb] text-white text-[13px] font-semibold hover:bg-[#1530d4] transition-colors"
+            className="w-full h-11 bg-[#0084eb] text-white text-[13px] font-semibold hover:bg-[#006bbd] transition-colors"
           >
             Submit Enquiry
           </button>

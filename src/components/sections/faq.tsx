@@ -97,7 +97,7 @@ export function FAQ() {
         <div className="flex justify-center mt-12">
           <Link
             href="#get-started"
-            className="inline-flex items-center gap-2 bg-[#0084eb] text-white text-base font-medium px-5 py-2.5 hover:bg-[#1530d4] transition-colors"
+            className="inline-flex items-center gap-2 bg-[#0084eb] text-white text-base font-medium px-5 py-2.5 hover:bg-[#006bbd] transition-colors"
           >
             Get started
             <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
