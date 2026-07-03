@@ -31,28 +31,28 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
   ),
   title: {
-    default: "Finmet — Smart Financial Tools",
-    template: "%s | Finmet",
+    default: "FinMet Technologies — Infrastructure for the Gold Economy",
+    template: "%s | FinMet Technologies",
   },
   description:
-    "Finmet helps you manage, track, and grow your finances with intelligent tools built for modern investors.",
-  keywords: ["finance", "fintech", "investment", "portfolio", "wealth"],
+    "FinMet Technologies provides the technology, operational frameworks and institutional partnerships that help banks, NBFCs and jewellers unlock the value of gold at scale.",
+  keywords: ["gold loans", "e-gold", "digital gold", "PMLA compliance", "gold asset management", "bullion", "fintech"],
   authors: [{ name: "Webalar", url: "https://webalar.in" }],
   creator: "Webalar",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "/",
-    siteName: "Finmet",
-    title: "Finmet — Smart Financial Tools",
+    siteName: "FinMet Technologies",
+    title: "FinMet Technologies — Infrastructure for the Gold Economy",
     description:
-      "Finmet helps you manage, track, and grow your finances with intelligent tools built for modern investors.",
+      "FinMet Technologies provides the technology, operational frameworks and institutional partnerships that help banks, NBFCs and jewellers unlock the value of gold at scale.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Finmet — Smart Financial Tools",
+    title: "FinMet Technologies — Infrastructure for the Gold Economy",
     description:
-      "Finmet helps you manage, track, and grow your finances with intelligent tools built for modern investors.",
+      "FinMet Technologies provides the technology, operational frameworks and institutional partnerships that help banks, NBFCs and jewellers unlock the value of gold at scale.",
     creator: "@webalar",
   },
   robots: {

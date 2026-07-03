@@ -8,73 +8,59 @@ const NAVBAR_HEIGHT = 76; // h-[60px] nav + py-2 (8px×2) from navbar.tsx
 const plans = [
   {
     name: "Gold Loans",
-    price: "$0",
-    period: "/month",
+    tagline: "Transfer. Not Originate.",
     description:
-      "FinMet Technologies supports structured gold loan solutions that help customers unlock the value of their assets through trusted financial pathways.",
+      "India's gold loan market includes a wide range of lending rates, often creating a gap between what borrowers pay and what they could access through more structured financial channels. FinMet Technologies facilitates the transfer of high-interest gold loans to partner banks at significantly lower rates, supported by asset management, compliance infrastructure and operational coordination.",
     features: [
-      "Gold-backed financial access",
-      "Structured lending support",
-      "Built for trust and eﬃciency",
+      "Gold loan transfer through partner banks",
+      "End-to-end asset management and custody coordination",
+      "Compliance built into every transaction",
+      "Designed for lower-cost financial access",
     ],
     theme: "light" as const,
-    cta:"Explore Gold Loans"
+    cta: "Talk to Us About Gold Loans",
   },
   {
     name: "E-Gold",
-    price: "",
-    period: "",
+    tagline: "Fractional Gold. Full Ownership.",
     description:
-      "FinMet Technologies enables jewellers to offer fractional gold buying through a more accessible, digitally enabled customer experience.",
+      "FinMet's E-Gold platform allows jewellers to offer digital gold to their customers starting from as little as ₹1, without inventory risk, upfront stock requirements or disruption to showroom operations. Customers can accumulate digital gold in a wallet linked to their jeweller and redeem it for physical jewellery when they are ready. The jeweller stays at the centre of the relationship. FinMet provides the infrastructure behind it.",
     features: [
-      "Fractional ownership models",
+      "Fractional digital gold from ₹1",
+      "Seamless redemption for physical jewellery",
       "Jeweller-ready integration",
-      "Designed for modern demand",
+      "Zero inventory risk",
     ],
     theme: "mid" as const,
-    cta:"Explore E-Gold"
-  },
-  {
-    name: "Technology",
-    price: "",
-    period: "",
-    description:
-      "FinMet Technologies develops digital infrastructure that supports seamless gold monetization, operational flow, and platform-led growth.",
-    features: [
-      "Digital-first systems",
-      "Streamlined workflows",
-      "Scalable platform support",
-    ],
-    theme: "dark" as const,
-    cta:"Explore Technology"
+    cta: "Talk to Us About E-Gold",
   },
   {
     name: "KYC and Compliance",
-    price: "",
-    period: "",
+    tagline: "PMLA Compliance Built for Jewellers",
     description:
-      "FinMet Technologies supports onboarding and compliance workflows that strengthen consistency, confidence, and operational readiness.",
+      "Since the jewellery sector was brought under PMLA, many businesses have known they are liable, but fewer have had a clear operating system for what compliance requires in practice. FinMet's compliance platform is built around the obligations jewellers face, including customer screening, transaction records, due diligence documentation and audit-ready reporting.",
     features: [
-      "Structured onboarding support",
-      "Compliance-led workflows",
-      "Built for trusted delivery",
+      "Customer screening against sanctions and PEP lists",
+      "Audit-ready documentation and reporting",
+      "Built specifically for the jewellery sector",
+      "Used by 50+ clients",
     ],
-    theme: "light" as const,
-    cta: "Explore KYC and Compliance"
+    theme: "dark" as const,
+    cta: "Talk to Us About Compliance",
   },
   {
     name: "Gold Loan Asset Management",
-    price: "",
-    period: "",
+    tagline: "Managing the Collateral Is as Important as Managing the Loan",
     description:
-      "FinMet Technologies provides operational support for managing gold-linked lending portfolios with greater visibility, structure, and control.",
+      "Gold loans create an operational challenge that standard lending systems are not always built for: a physical asset that must be tracked, valued, monitored and managed across locations throughout the life of the loan. FinMet's asset management platform gives banks and NBFCs the visibility and control to manage gold-linked lending portfolios with greater precision.",
     features: [
-      "Asset handling support",
-      "Operational coordination",
-      "Portfolio-focused management",
+      "Real-time inventory tracking across locations",
+      "Portfolio-wide LTV monitoring",
+      "Regulatory audit trails",
+      "Data analytics and operational reporting",
     ],
     theme: "mid" as const,
-    cta: "Explore Asset Management"
+    cta: "Talk to Us About Asset Management",
   },
 ];
 
@@ -138,13 +124,19 @@ export function Pricing() {
       >
         <div className="mx-auto max-w-7xl px-6">
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
-            <h2 className="text-4xl md:text-5xl font-medium text-gray-900 tracking-tight">
-              Built for the Modern Gold Economy
-            </h2>
+            <div>
+              <span className="block text-sm font-medium uppercase tracking-widest text-[#0084eb] mb-3">
+                Solutions
+              </span>
+              <h2 className="text-4xl md:text-5xl font-medium text-gray-900 tracking-tight">
+                Four Products. One Connected Gold Infrastructure.
+              </h2>
+            </div>
             <p className="text-black text-base leading-relaxed max-w-xl md:text-right">
-              FinMet Technologies oﬀers a focused suite of solutions designed to help
-              institutions and businesses unlock the value of gold with greater precision,
-              flexibility, and control.
+              FinMet Technologies offers a focused suite of solutions designed to
+              help institutions and businesses manage, monetise and deliver
+              gold-backed services with greater visibility, control and
+              efficiency.
             </p>
           </div>
         </div>
@@ -175,11 +167,14 @@ export function Pricing() {
                       <div className={`w-[6px] h-[6px] ${isDark ? "bg-blue-700" : "bg-[#0084eb]/40"}`} />
                     </div>
                   </div>
-                  <div className="flex items-baseline gap-1 mb-3">
+                  <div className="flex items-baseline gap-1 mb-1">
                     <span className={`text-3xl md:text-4xl font-medium tracking-tight ${isDark ? "text-white" : "text-gray-900"}`}>
                       {plan.name}
                     </span>
                   </div>
+                  <p className={`text-sm font-medium mb-3 ${isDark ? "text-blue-300/70" : "text-[#0084eb]"}`}>
+                    {plan.tagline}
+                  </p>
                   <p className={`text-sm leading-relaxed max-w-xs ${isDark ? "text-blue-200/60" : "text-black/80"}`}>
                     {plan.description}
                   </p>

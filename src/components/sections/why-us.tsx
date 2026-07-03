@@ -1,8 +1,8 @@
 const pillars = [
   {
-    title: "Assess the Requirement",
+    title: "Sector knowledge that goes all the way down",
     description:
-      "FinMet Technologies begins by understanding the use case, partner objectives, and operational context.",
+      "Our team has spent years inside the gold market, not studying it from the outside. That experience helps our platforms handle the real operational edge cases that generic systems often miss.",
     icon: (
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
         <path d="M8 1v14M1 8h14M3.5 3.5l9 9M12.5 3.5l-9 9" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
@@ -10,9 +10,9 @@ const pillars = [
     ),
   },
   {
-    title: "Align the Right Solution",
+    title: "Institutional credibility",
     description:
-      "From onboarding and verification to solution design, each engagement is structured around the most suitable monetization pathway.",
+      "We work with established banking partners across the gold value chain. These relationships are not just logos. They are the operational foundation behind the solutions we deliver.",
     icon: (
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
         <circle cx="8" cy="8" r="6.5" stroke="currentColor" strokeWidth="1.4" />
@@ -21,25 +21,15 @@ const pillars = [
     ),
   },
   {
-    title: "Enable Execution",
+    title: "Built for how gold actually moves",
     description:
-      "FinMet Technologies brings together technology, process support, and partner coordination to move from planning to delivery.",
+      "Physical gold moves through jewellers, refiners, bullion dealers, customers and bank vaults. Our platforms reflect that reality instead of simplifying it away.",
     icon: (
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
         <rect x="1.5" y="1.5" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.4" />
         <rect x="9.5" y="1.5" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.4" />
         <rect x="1.5" y="9.5" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.4" />
         <rect x="9.5" y="9.5" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.4" />
-      </svg>
-    ),
-  },
-  {
-    title: "Support Ongoing Growth",
-    description:
-      "FinMet Technologies continues to support execution through operational oversight, workflow eﬃciency, and long-term engagement.",
-    icon: (
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-        <path d="M8 1.5L9.8 5.7l4.5.4-3.3 3 1 4.4L8 11.2l-4 2.3 1-4.4-3.3-3 4.5-.4z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
       </svg>
     ),
   },
@@ -50,26 +40,21 @@ export function WhyUs() {
     <section className="bg-[#0C0D87] py-20 md:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center mb-14">
+          <span className="block text-sm font-medium uppercase tracking-widest text-blue-300/70 mb-3">
+            Why FinMet Technologies
+          </span>
           <h2 className="text-3xl md:text-5xl font-medium text-white tracking-tight">
-            A More Structured Approach to Gold Monetization
+            The Difference Is in the Depth
           </h2>
-          <p className="mt-4 text-white/80 text-base leading-relaxed max-w-2xl  mx-auto">
-            FinMet Technologies brings clarity to gold monetization through a process
-            built around practical execution, institutional alignment, and long-term
-            partner value.
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
-          {pillars.map((p,i) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-8">
+          {pillars.map((p) => (
             <div key={p.title} className="flex gap-4">
               <div className="shrink-0 w-11 h-11 rounded-full border border-white/20 flex items-center justify-center text-white">
                 {p.icon}
               </div>
               <div className="flex flex-col gap-1.5">
-                <span className="text-white/50 text-xs font-medium uppercase tracking-widest">
-                  Step {i+1}
-                </span>
                 <h3 className="text-white text-lg font-medium leading-snug">{p.title}</h3>
                 <p className="text-white/70 text-sm leading-relaxed">
                   {p.description}

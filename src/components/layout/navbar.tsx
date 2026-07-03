@@ -7,9 +7,10 @@ import Image from "next/image";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "About Us", href: "#how-it-works" },
-  { label: "Solutions", href: "#features" },
-  { label: "Partners", href: "#testimonials" },
+  { label: "About", href: "#about" },
+  { label: "Solutions", href: "#pricing" },
+  { label: "Partners", href: "#partners" },
+  { label: "Contact", href: "#contact" },
 ];
 
 function FinmetLogo() {
@@ -19,7 +20,7 @@ function FinmetLogo() {
         src="/brand/main-logo.png"
         width={100}
         height={60}
-        alt="Finmet Logo"
+        alt="FinMet Technologies Logo"
         className="h-20 w-auto object-contain"
       />
     </Link>

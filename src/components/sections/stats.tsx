@@ -10,20 +10,23 @@ const stats = [
   {
     label: "Experience",
     value: "10",
-    description: "Years of industry expertise in gold-backed financial services.",
+    description: "Years of Experience",
     suffix: "+",
+    prefix: "",
   },
   {
     label: "Transactions",
     value: "600",
-    description: "Successful transactions executed across our partner network.",
+    description: "Transactions",
     suffix: "+",
+    prefix: "",
   },
   {
     label: "Loan Value",
     value: "1.6",
-    description: "Total loan value disbursed through trusted client relationships.",
-    suffix: "B+",
+    description: "in Loan Value",
+    suffix: "B",
+    prefix: "₹",
   },
 ];
 
@@ -46,15 +49,29 @@ export function Stats() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-white py-20 md:py-24">
+    <section id="about" ref={sectionRef} className="bg-white py-20 md:py-24">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="mb-10 max-w-lg">
+        <div className="mb-10 max-w-2xl">
+          <span className="block text-sm font-medium uppercase tracking-widest text-[#0084eb] mb-3">
+            About FinMet Technologies
+          </span>
           <h2 className="text-4xl md:text-5xl font-medium text-gray-900 leading-[1.08]">
-            A Track Record Built on Momentum
+            Built From Inside the Gold Market
           </h2>
           <p className="mt-4 text-base leading-relaxed">
-            A growing footprint across gold-backed financial services, trusted
-            partnerships, and operational delivery.
+            Most technology platforms come to gold from the outside. FinMet
+            Technologies was built from direct experience inside the market,
+            across bullion banking, jewellers, refiners, dealers and financial
+            institutions.
+          </p>
+          <p className="mt-4 text-base leading-relaxed">
+            That background shapes everything we do. It informs the SOPs behind
+            our gold loan solutions, the compliance infrastructure we build for
+            jewellers, and the asset management systems designed around how gold
+            actually moves through the market. We are building the infrastructure
+            India&apos;s gold economy has needed for a long time: for the banks
+            that lend against gold, the jewellers who sell it, and the customers
+            who depend on it.
           </p>
         </div>
 
@@ -93,11 +110,9 @@ export function Stats() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
           {stats.map((s) => (
             <div key={s.label} className="flex flex-col gap-2">
-              <span className="text-lg text-black/80 uppercase tracking-wide">
-                {s.label}
-              </span>
               <span className="text-4xl font-medium text-[#0084eb] tracking-tight">
-                <NumberTicker className="text-4xl font-medium text-[#0084eb] tracking-tight" value={Number(s.value)} /> {s.suffix}
+                {s.prefix}
+                <NumberTicker className="text-4xl font-medium text-[#0084eb] tracking-tight" value={Number(s.value)} />{s.suffix}
               </span>
               <p className="text-black/80 text-base leading-relaxed">
                 {s.description}

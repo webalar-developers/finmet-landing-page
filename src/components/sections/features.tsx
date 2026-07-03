@@ -142,13 +142,18 @@ export function Features() {
   return (
     <section id="features" className="bg-white py-20 md:py-24">
       <div className="mx-auto max-w-5xl px-6 text-center mb-12">
+        <span className="block text-sm font-medium uppercase tracking-widest text-[#0084eb] mb-3">
+          What Guides Us
+        </span>
         <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-gray-900">
-          Driving Change Across the Gold Industry
+          Infrastructure for a More Organised Gold Economy
         </h2>
         <p className="mt-4 text-base max-w-xl mx-auto leading-relaxed">
-          The work of FinMet Technologies is guided by principles that make gold
-          more accessible, more eﬃcient, and more relevant to the needs of a
-          modern financial landscape.
+          India&apos;s gold market is large, valuable and deeply trusted by
+          customers. But the systems around gold-backed finance, compliance and
+          digital access have often remained fragmented. FinMet Technologies was
+          built to change that by bringing institutional standards, operational
+          clarity and purpose-built technology to the gold economy.
         </p>
       </div>
 
@@ -165,11 +170,12 @@ export function Features() {
             <div className="relative z-10 p-8 md:p-10 flex flex-col items-center justify-center min-h-125 text-center">
               <div className="max-w-md">
                 <h3 className="text-2xl md:text-3xl font-semibold text-white mb-3">
-                  Innovation
+                  The asset comes first.
                 </h3>
                 <p className="text-white text-[14px] leading-relaxed mb-6">
-                  FinMet Technologies develops forward-looking solutions that rethink how
-                  gold can be managed, monetized, and delivered.
+                  Gold is not like other financial instruments. It is physical,
+                  emotional and deeply connected to culture, credit and trust.
+                  Our solutions are designed around that reality.
                 </p>
                 <Link
                   href="#get-started"
@@ -183,11 +189,11 @@ export function Features() {
 
           <div className="overflow-hidden bg-[#0f0f12] p-7 flex flex-col relative h-112.5">
             <h3 className="text-3xl font-semibold text-white mb-2">
-              Accessibility
+              Compliance is not optional.
             </h3>
             <p className="text-white text-base leading-relaxed max-w-lg">
-              FinMet Technologies works to broaden access to gold-based financial
-              solutions through more flexible and practical models.
+              Every solution we build is designed around regulatory requirements
+              from the start, not retrofitted later.
             </p>
             <Image
               src="/features/access-mock.avif"
@@ -201,11 +207,12 @@ export function Features() {
           <div className="relative overflow-hidden bg-transparent flex flex-col h-112.5">
             <div className="relative z-10 flex flex-col h-full p-4">
               <h3 className="text-3xl font-semibold text-white mb-2">
-                Sustainability
+                Operational clarity over feature complexity.
               </h3>
               <p className="text-white text-base leading-relaxed max-w-lg">
-                FinMet Technologies builds with long-term relevance in mind, creating
-                systems that support lasting value across the ecosystem.
+                Our platforms are built for the people who use them every day:
+                bank teams, jeweller staff, compliance teams and operations
+                managers.
               </p>
               <Image
                 src="/features/flow-mock.avif"
@@ -221,11 +228,12 @@ export function Features() {
             <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
               <div>
                 <h3 className="text-2xl md:text-3xl font-semibold text-white mb-3">
-                  Transparency
+                  Partnerships over transactions.
                 </h3>
                 <p className="text-base text-white leading-relaxed mb-6">
-                  FinMet Technologies believes trust is strengthened through clarity,
-                  consistency, and dependable execution.
+                  We work with banks, NBFCs and jewellers as long-term partners.
+                  The gold market depends on trust, and our work is built around
+                  earning it.
                 </p>
                 <Link
                   href="#learn-more"

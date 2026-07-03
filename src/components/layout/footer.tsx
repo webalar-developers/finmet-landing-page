@@ -3,9 +3,11 @@ import Link from "next/link";
 
 const nav = [
   { label: "Home", href: "/" },
-  { label: "About Us", href: "#how-it-works" },
-  { label: "Solutions", href: "#features" },
-  { label: "Partners", href: "#testimonials" },
+  { label: "About", href: "#about" },
+  { label: "Solutions", href: "#pricing" },
+  { label: "Partners", href: "#partners" },
+  { label: "Contact", href: "#contact" },
+  { label: "Privacy Policy", href: "#" },
 ];
 
 const social = [
@@ -24,12 +26,15 @@ export function Footer() {
             <div className="flex items-center gap-2.5 mb-3">
               <Image
                 src="/brand/main-logo.png"
-                alt="Finmet logo"
+                alt="FinMet Technologies logo"
                 width={400}
                 height={300}
                 className="w-auto h-20 object-contain"
               />
             </div>
+            <p className="text-white/80 text-base max-w-xs">
+              Building the infrastructure India&apos;s gold economy needs.
+            </p>
           </div>
 
           <div>
@@ -65,7 +70,10 @@ export function Footer() {
 
         <div className="mt-12 border-t border-white/10 pt-6">
           <p className="text-white text-base">
-            &copy; {new Date().getFullYear()} Finmet Technologies. All rights reserved.
+            FinMet Technologies Pvt Ltd | Coimbatore, India
+          </p>
+          <p className="text-white/80 text-sm mt-1">
+            &copy; {new Date().getFullYear()} FinMet Technologies. All rights reserved.
           </p>
         </div>
       </div>

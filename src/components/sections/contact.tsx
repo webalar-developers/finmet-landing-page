@@ -37,13 +37,17 @@ export function Contact() {
         </div>
 
         <div className="text-center mb-10">
+          <span className="block text-sm font-medium uppercase tracking-widest text-[#0084eb] mb-3">
+            Get in Touch
+          </span>
           <h2 className="text-3xl md:text-5xl font-medium text-gray-900 tracking-tight">
-           Start the Conversation
+            Start the Conversation
           </h2>
           <p className="mt-3 text-black/80 text-base leading-relaxed max-w-xl mx-auto">
-           Whether you are exploring gold loan solutions, digital gold oﬀerings,
-compliance support, or strategic partnerships, FinMet Technologies is
-ready to help you find the right path forward.
+            Whether you are a bank reviewing your gold loan operations, a
+            jeweller exploring E-Gold or PMLA compliance, or an institution
+            looking for a long-term partner in the gold economy, FinMet
+            Technologies is ready to help you find the right path forward.
           </p>
         </div>
 
@@ -63,7 +67,7 @@ ready to help you find the right path forward.
               <label className="text-[12px] font-medium text-gray-500">Company Name</label>
               <input
                 type="text"
-                placeholder="Finmet"
+                placeholder="FinMet"
                 value={form.company}
                 onChange={set("company")}
                 className="h-10 border border-gray-200 bg-white px-3 text-[13px] text-gray-900 placeholder:text-gray-300 outline-none focus:border-[#0084eb] transition-colors"
@@ -130,7 +134,7 @@ ready to help you find the right path forward.
           </button>
 
           <p className="text-center text-[11px] text-gray-300">
-            Responses usually take 48 hours.
+            We will respond within one business day.
           </p>
         </form>
       </div>

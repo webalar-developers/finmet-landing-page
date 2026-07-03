@@ -1,29 +1,28 @@
-import Link from "next/link";
-
 const steps = [
   {
     num: ".01",
-    title: "Intro",
-    description:'From gold loan solutions to E-Gold platforms and operational support, FinMet Technologies brings together sector knowledge, operational clarity, and purpose-built technology to deliver solutions that feel more structured, more dependable, and better aligned with the realities of the gold economy.'
+    title: "Understand the Use Case",
+    description:
+      "We begin by understanding your institution's objectives, operational context and existing infrastructure.",
   },
   {
     num: ".02",
-    title: "Deep Industry Expertise",
+    title: "Align the Right Solution",
     description:
-      "FinMet Technologies brings together sector knowledge, operational clarity, and purpose-built technology to deliver solutions that feel more structured,more dependable, and better aligned with the realities of the gold economy.",
+      "Whether you are a bank managing a gold loan portfolio, a jeweller launching E-Gold or a business strengthening compliance, we scope the right solution around your needs.",
   },
   {
     num: ".03",
-    title: "Execution Designed Around Partners",
+    title: "Deliver With Operational Rigour",
     description:
-      "From solution design to operational support, FinMet Technologies helps partners move with greater clarity, structure, and confidence.",
-    cta: false,
+      "We bring together technology, SOPs, compliance workflows and partner coordination to move from planning to implementation.",
   },
   {
     num: ".04",
-    title:"Technology Built for Scale",
-    description:"FinMet Technologies develops platforms and workflows that support more connected operations, stronger eﬃciency, and sustainable growth."
-  }
+    title: "Support Ongoing Growth",
+    description:
+      "Gold markets move. Regulations change. We provide ongoing operational support, platform maintenance and partnership continuity.",
+  },
 ];
 
 function FanLines() {
@@ -99,9 +98,19 @@ export function HowItWorks() {
         <div className="grid md:grid-cols-3 gap-12 md:gap-10 items-stretch">
 
           <div className="md:col-span-2 relative flex flex-col gap-20">
-            <h2 className="relative z-10 text-4xl md:text-5xl font-medium tracking-tight text-gray-900 leading-[1.08] max-w-xl">
-             Expertise, Infrastructure, and Execution in One Partner
-            </h2>
+            <div className="relative z-10 flex flex-col gap-4 max-w-xl">
+              <span className="text-sm font-medium uppercase tracking-widest text-[#0084eb]">
+                How We Work
+              </span>
+              <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-gray-900 leading-[1.08]">
+                From Requirement to Execution, Without the Friction
+              </h2>
+              <p className="text-base leading-relaxed max-w-md">
+                FinMet operates as an embedded partner, not just a vendor. Every
+                engagement is shaped around the partner&apos;s requirements,
+                operating environment and long-term objectives.
+              </p>
+            </div>
             <div className="hidden md:block absolute top-0 bottom-0 left-0 w-full pointer-events-none">
               <FanLines />
             </div>
@@ -119,23 +128,6 @@ export function HowItWorks() {
                 <p className="text-base leading-relaxed max-w-xs">
                   {step.description}
                 </p>
-                {step.cta && (
-                  <Link
-                    href="#get-started"
-                    className="mt-3 inline-flex items-center gap-2 bg-[#0084eb] text-white text-base font-medium px-4 py-2.5  hover:bg-[#006bbd] transition-colors w-fit"
-                  >
-                    Get started
-                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
-                      <path
-                        d="M2 9L9 2M9 2H3.5M9 2V7.5"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </Link>
-                )}
               </div>
             ))}
           </div>
