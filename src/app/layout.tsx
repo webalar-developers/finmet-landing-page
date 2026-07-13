@@ -3,6 +3,7 @@ import { Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { SmoothScrollProvider } from "@/components/providers/smooth-scroll";
+import { IntroLock } from "@/components/intro-lock";
 
 const switzer = localFont({
   src: [
@@ -83,6 +84,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-screen bg-background text-foreground antialiased">
+        <IntroLock />
         <SmoothScrollProvider>{children}</SmoothScrollProvider>
       </body>
     </html>
