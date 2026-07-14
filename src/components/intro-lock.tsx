@@ -1,27 +1,48 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { motion } from "motion/react";
 
-type Phase = "locked" | "unlocking" | "revealing" | "done";
+type Phase = "intro" | "revealing" | "done";
+
+const TIMING = {
+  plainHold: 600,
+  textFade: 400,
+  textHold: 900,
+  textFadeOut: 400,
+  rotateDuration: 600,
+  finalHold: 1000,
+  revealDuration: 800,
+};
 
 export function IntroLock() {
-  const [phase, setPhase] = useState<Phase>("locked");
+  const [showText, setShowText] = useState(false);
+  const [rotated, setRotated] = useState(false);
+  const [phase, setPhase] = useState<Phase>("intro");
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
 
-    const unlockTimer = setTimeout(() => setPhase("unlocking"), 1000);
-    const revealTimer = setTimeout(() => setPhase("revealing"), 1700);
-    const doneTimer = setTimeout(() => {
-      setPhase("done");
-      document.body.style.overflow = "";
-    }, 2600);
+    const textInAt = TIMING.plainHold;
+    const textOutAt = textInAt + TIMING.textFade + TIMING.textHold;
+    const rotateAt = textOutAt + TIMING.textFadeOut;
+    const revealAt = rotateAt + TIMING.rotateDuration + TIMING.finalHold;
+    const doneAt = revealAt + TIMING.revealDuration;
+
+    const timers = [
+      setTimeout(() => setShowText(true), textInAt),
+      setTimeout(() => setShowText(false), textOutAt),
+      setTimeout(() => setRotated(true), rotateAt),
+      setTimeout(() => setPhase("revealing"), revealAt),
+      setTimeout(() => {
+        setPhase("done");
+        document.body.style.overflow = "";
+      }, doneAt),
+    ];
 
     return () => {
-      clearTimeout(unlockTimer);
-      clearTimeout(revealTimer);
-      clearTimeout(doneTimer);
+      timers.forEach(clearTimeout);
       document.body.style.overflow = "";
     };
   }, []);
@@ -30,102 +51,103 @@ export function IntroLock() {
 
   return (
     <motion.div
-      className="fixed inset-0 z-[999] flex items-center justify-center bg-[#0b0904]"
-      animate={{
-        clipPath:
-          phase === "revealing" ? "circle(0% at 50% 50%)" : "circle(150% at 50% 50%)",
+      aria-hidden="true"
+      style={{
+        position: "fixed",
+        inset: 0,
+        zIndex: 999,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        background:
+          "radial-gradient(ellipse at 50% 45%, #241d13 0%, #0a0806 55%, #000000 100%)",
       }}
-      transition={{ duration: 0.9, ease: [0.65, 0, 0.35, 1] }}
+      transition={{ duration: TIMING.revealDuration / 1000, ease: [0.65, 0, 0.35, 1] }}
     >
       <motion.div
-        className="relative"
-        initial={{ opacity: 0, scale: 0.7 }}
-        animate={{
-          opacity: 1,
-          scale: phase === "revealing" ? 1.15 : 1,
+        className="rounded-full blur-3xl"
+        style={{
+          position: "absolute",
+          inset: 0,
+          margin: "auto",
+          width: "30rem",
+          height: "30rem",
+          background:
+            "radial-gradient(circle, rgba(246,196,83,0.45), transparent 70%)",
         }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        animate={{ opacity: rotated ? [0.5, 1, 0.5] : [0.35, 0.6, 0.35] }}
+        transition={{
+          duration: rotated ? 1.6 : 2.4,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+
+      <motion.div
+        className="h-80 w-80 sm:h-104 sm:w-104 md:h-120 md:w-120"
+        style={{ position: "relative" }}
+        animate={{
+          opacity: phase === "revealing" ? 0 : 1,
+          scale: phase === "revealing" ? 1.06 : 1,
+        }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
       >
         <motion.div
-          className="absolute inset-0 rounded-full blur-3xl"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(246,196,83,0.45), transparent 70%)",
-          }}
-          animate={{ opacity: [0.4, 0.8, 0.4] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        />
-
-        <svg
-          width="120"
-          height="140"
-          viewBox="0 0 120 140"
-          className="relative drop-shadow-[0_0_25px_rgba(246,196,83,0.35)]"
+          style={{ position: "absolute", inset: 0 }}
+          animate={{ rotate: rotated ? -25 : 0 }}
+          transition={{ duration: TIMING.rotateDuration / 1000, ease: [0.34, 1.15, 0.64, 1] }}
         >
-          <defs>
-            <linearGradient id="goldBody" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#fff3c4" />
-              <stop offset="35%" stopColor="#f6c453" />
-              <stop offset="70%" stopColor="#c8891f" />
-              <stop offset="100%" stopColor="#8a5a10" />
-            </linearGradient>
-            <linearGradient id="goldShackle" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="#fff8dd" />
-              <stop offset="50%" stopColor="#eab654" />
-              <stop offset="100%" stopColor="#9c6b1c" />
-            </linearGradient>
-            <clipPath id="bodyClip">
-              <rect x="25" y="60" width="70" height="60" rx="10" />
-            </clipPath>
-          </defs>
-
-          <motion.path
-            d="M 40 68 V 42 A 20 20 0 0 1 80 42 V 68"
-            fill="none"
-            stroke="url(#goldShackle)"
-            strokeWidth="12"
-            strokeLinecap="round"
-            style={{ transformOrigin: "80px 68px" }}
-            animate={
-              phase === "locked"
-                ? { y: 0, rotate: 0 }
-                : { y: -16, rotate: -32 }
-            }
-            transition={{ duration: 0.7, ease: [0.34, 1.56, 0.64, 1] }}
+          <Image
+            src="/lock/step-one.png"
+            alt=""
+            fill
+            sizes="(min-width: 768px) 480px, (min-width: 640px) 416px, 320px"
+            style={{ objectFit: "contain" }}
+            loading="eager"
+            preload
           />
 
-          <rect
-            x="25"
-            y="60"
-            width="70"
-            height="60"
-            rx="10"
-            fill="url(#goldBody)"
-            stroke="#7a4e12"
-            strokeWidth="1.5"
+          <motion.div
+            style={{
+              position: "absolute",
+              left: "55%",
+              top: "27%",
+              width: "22%",
+              height: "24%",
+              transform: "translate(-50%, -50%)",
+              background:
+                "radial-gradient(#1c150c 45%, rgba(28,21,12,0) 75%)",
+            }}
+            animate={{ opacity: rotated ? 1 : 0, scale: rotated ? 1 : 0.5 }}
+            transition={{
+              duration: TIMING.textFadeOut / 1000,
+              delay: rotated ? TIMING.rotateDuration / 1000 - 0.15 : 0,
+              ease: "easeOut",
+            }}
           />
+        </motion.div>
 
-          <g clipPath="url(#bodyClip)">
-            <motion.rect
-              x="-30"
-              y="55"
-              width="20"
-              height="70"
-              fill="rgba(255,255,255,0.55)"
-              transform="skewX(-20)"
-              animate={{ x: [-30, 140] }}
-              transition={{
-                duration: 1.6,
-                repeat: Infinity,
-                repeatDelay: 0.4,
-                ease: "easeInOut",
-              }}
-            />
-          </g>
-
-          <circle cx="60" cy="86" r="7" fill="#3a2410" />
-          <rect x="57" y="90" width="6" height="14" rx="2" fill="#3a2410" />
-        </svg>
+        <motion.div
+          style={{
+            position: "absolute",
+            left: "50%",
+            top: "58%",
+            transform: "translate(-50%, -50%)",
+            width: "88%",
+          }}
+          animate={{ opacity: showText ? 1 : 0 }}
+          transition={{ duration: TIMING.textFade / 1000, ease: "easeInOut" }}
+        >
+          <span
+            className="block rounded-md px-4 py-2 text-center text-sm font-semibold text-neutral-900 shadow-lg sm:text-base"
+            style={{
+              background: "linear-gradient(135deg, #f8dd8b, #d9a53a)",
+              boxShadow: "0 4px 18px rgba(0,0,0,0.35)",
+            }}
+          >
+            Unlock Premium Gold Opportunities
+          </span>
+        </motion.div>
       </motion.div>
     </motion.div>
   );
